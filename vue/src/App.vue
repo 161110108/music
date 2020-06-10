@@ -1,0 +1,388 @@
+<template>
+  <div id='root'>
+      <router-view></router-view>
+  </div>
+</template>
+
+<script>
+export default {
+ 
+}
+</script>
+<style lang="less">
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+#app{
+    margin-left:20px;
+    margin-top:20px;
+}
+ul{
+    list-style: none;
+
+}
+body{
+    font-size: .3rem;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+.clear::after{
+    content:'';
+    display: block;
+    clear:both
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+input {
+    border:none;
+    background:none;
+    outline: none;
+
+}
+
+/* head组件样式s */
+#head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 1.6rem;
+    background-color:#fe4a00;
+    padding: 0rem .3rem;
+    .left{
+        color:#fff;
+        font-size: .46rem;
+        line-height: .6rem;
+    }
+    .right{
+        /* height: .46rem; */
+        line-height: .6rem;
+        background-color:#fff;
+        color:#fe4a00;
+        padding:0rem 0.3rem;
+        border-radius: .3rem;
+    }
+}
+
+
+/* head组件样式e */
+
+
+/* Nav样式s */
+#nav{
+    display: flex;
+    padding-bottom:2px;
+    border-bottom:1px solid #8a8a8a;
+    height: 1rem;
+    font-size: .36rem;  
+    font-weight: 700;
+    div {
+        flex:1;
+        padding-top: .3rem;
+        text-align:center;
+    }
+    a{
+        display: inline-block;
+        height: 100%;
+    
+    }
+    .active{
+        color:#fc0000;
+        border-bottom:.06rem solid#fc0000
+    }
+}
+/* Nav样式e */
+html,body,#root{
+    height: 100%;
+}
+#index{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#index section{
+    flex:1;
+    overflow: scroll;
+}
+
+
+/* Index样式s */
+#recommend{
+    margin:0;
+    .swrap{
+        height: 3rem;
+        background-color:red;
+    }
+    h3{
+        margin:.35rem 0rem .2rem ;
+        padding-left:.2rem;
+        font-size:.34rem;
+        border-left: .06rem solid #fc0000;
+    }
+    // 歌单
+    .sheet{
+        float:left;
+        width:33%;
+        height:3.5rem;
+        padding:.07rem;
+        img{
+            width:100%;
+        }
+        p{
+            margin:.1rem 0;
+            height:.8rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+    }
+
+
+}
+// 最新
+.item{
+    display: flex;
+    align-items: center;
+    height:1.8rem;
+    padding: .02rem .2rem;
+    border-bottom: 2px solid #f4f4f4;
+    .num{
+        width:.6rem;
+        text-align: center;
+        font-size: .3rem;
+        color:#ff3b37;
+    }
+    .left{
+        flex:1;
+        .name{
+            line-height: .70rem;
+            font-size: .34rem;
+        }
+        .info{
+            font-size: .24rem;
+            color:#616161;
+            .quality{
+                display: inline-block;
+                background:url(./images/hot.png) no-repeat;
+                background-size: 166px 97px;
+                width:12px;
+                height: 8px;
+                margin-right:.1rem;
+                padding:0 .02rem;
+                // vertical-align: .05rem;
+            }
+        }
+    }
+    .right{
+        width:.45rem;
+        font-size: .5rem;
+        color:#ababab;
+    }
+}
+/* Index样式e */
+
+/* 热歌榜s */ 
+#hot{
+    .img{
+        height: 3.8rem;
+        background:url(./images/bg.jpg);
+        overflow: hidden;
+    }
+    .hot-img{
+        margin: 0.8rem 0 0 .3rem;
+        width:3rem;
+        height:1.5rem;
+        background:url(./images/hot.png);
+        background-position:right bottom;
+        background-size:120%;
+    }
+    .time{
+        font-size: .18rem;
+        line-height: .6rem;
+        margin-left:.3rem;
+        color:#fff
+    }
+    // songlist
+    .back{
+        width: .4rem;
+        height: .4rem;
+        position: fixed;
+        top:.2rem;
+        left:.2rem;
+        color:#aaa;
+        z-index: 10;
+
+    }
+    .img-box{
+        height: 3.8rem;
+        overflow: hidden;
+        position: relative;
+        .show{
+            position: absolute;
+            top:0.9rem;
+            left:.5rem;right:.5rem;
+            display:flex;
+            img{
+                width:2rem;
+            }
+            p{
+                padding:.2rem;
+                color:#fff;
+                font-size: .32rem;
+                line-height: .5rem;
+            }
+        }
+    }
+    .img-list{
+        display: flex;
+        height: 100%;
+        background-size: cover;
+        filter:blur(20px);
+        transform: scale(1.5);
+    }
+}
+/* 热歌榜e */ 
+
+/* 搜索页s */
+#search{
+    height: auto;
+    .search-box{
+        display: flex;
+        align-items: center;
+        margin:.25rem .35rem;
+        background-color:#f3f3f3;
+        height:.8rem;
+        padding:0 .2rem;
+        border-radius: .4rem;
+        input{
+            flex:1;
+            margin-left:.05rem;
+            height: .8rem;
+            font-size: .35rem;
+        }
+    }
+    .key-word{
+        float:left;
+        margin: .4rem .2rem;
+        line-height: .6rem;
+        padding:0 0.2rem;
+        border:1px solid #7b7b7b;
+        font-size: .2rem;
+        border-radius: .3rem;
+    }
+}
+/* 搜索页e */
+
+
+/* Swiper s */
+.swiper{
+    width: 100%;
+    height: 100%;
+    .swiper-slide,
+    img{
+        height: 100%;
+        width:100%;
+    }
+}
+/* Swiper e */
+
+.center{
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+
+/*播放页 s*/
+#play{
+    width:100%;
+    height: 100%;
+    background-color:#7f7f7f;
+    .head{
+        height: 55%;
+        position: relative;
+        padding-top:1.1rem;
+        .back{
+            width:.6rem;
+            height:.6rem;
+            font-size: .5rem;
+            color:#fff;
+            position: absolute;
+            top:.2rem;
+            left:.2rem;
+            border:none
+        }
+        .needle{
+            position: absolute;
+            left:50%;
+            top:-2px;
+            width:3.2rem;
+            height: 2.25rem;
+            margin-left:-0.15rem;
+            transform-origin: .6rem 0;
+            transition: all 2s;
+            z-index:100;
+        }
+        .cd{
+            position: relative;
+            height: 100%;
+            background:url('./images/play/disc-ip6.png') no-repeat;
+            background-size:contain;
+            background-position: center;
+            .iconfont{
+                position: absolute;
+                color:#fff;
+                font-size: .8rem;
+                width:.8rem;
+                height: .8rem;
+                .center
+            }
+            img{
+                position: absolute;
+                height: 63%;
+                border-radius: 50%;
+                .center
+            }
+        }
+    }
+    .content{
+        height: 40%;
+        padding:.4rem 1rem;
+        color:#0b0c12;
+        text-align: center;
+        font-size: .24rem;
+        .title{
+            font-size: .30rem;
+            margin-bottom:.4rem;
+            .songname{
+                color:#fff
+            }
+        }
+        .lyric{
+            position: relative;
+            height: 80%;
+            overflow: scroll;
+            font-size:.26rem;
+            li{
+                margin:.36rem 0;
+            }
+        }
+        .active{
+            font-size: .3rem;
+            color:#fff;
+            
+        }
+    }
+    
+}
+/*播放页 e*/
+</style>

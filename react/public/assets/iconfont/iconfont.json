@@ -1,0 +1,58 @@
+{
+  "id": "1856488",
+  "name": "react-music",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "198623",
+      "name": "Back icon1",
+      "font_class": "backicon1",
+      "unicode": "e937",
+      "unicode_decimal": 59703
+    },
+    {
+      "icon_id": "287175",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "14418903",
+      "name": "next-1",
+      "font_class": "next-1",
+      "unicode": "e72e",
+      "unicode_decimal": 59182
+    },
+    {
+      "icon_id": "14418910",
+      "name": "pause",
+      "font_class": "pause",
+      "unicode": "e72f",
+      "unicode_decimal": 59183
+    },
+    {
+      "icon_id": "14418912",
+      "name": "play circle",
+      "font_class": "playcircle",
+      "unicode": "e730",
+      "unicode_decimal": 59184
+    },
+    {
+      "icon_id": "14418915",
+      "name": "previous-1",
+      "font_class": "previous-1",
+      "unicode": "e731",
+      "unicode_decimal": 59185
+    },
+    {
+      "icon_id": "14418918",
+      "name": "pause-line-circle",
+      "font_class": "pause-line-circle",
+      "unicode": "e732",
+      "unicode_decimal": 59186
+    }
+  ]
+}
